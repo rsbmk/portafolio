@@ -1,0 +1,44 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const EXPERIENCIE = [
+  {
+    date: "Actualmente...",
+    title: "Mid Frontend Web Developer",
+    company: "Jelou AI",
+    description: "Como mano derecha del Tech Lead, desempeñé un papel esencial en uno de los equipos más innovadores de la empresa, especializado en el desarrollo de herramientas que optimizan las operaciones clave de la compañía.",
+    link: "https://jelou.ai/",
+  },
+  {
+    date: "Enero 2022",
+    title: "Frontend Web Developer",
+    company: "Jelou AI",
+    description:
+      "Me especialicé en el desarrollo de interfaces de usuario que impulsaron nuevas ideas y productos en la plataforma. Este rol implicaba desarrollo de nuevos productos, resolución de problemas y colaboración multidisciplinaria",
+    link: "https://jelou.ai/",
+  },
+  {
+    date: "Diciembre 2021",
+    title: "Lead FullStack Web Developer",
+    company: "ID for Ideas | Prácticas",
+    description: "En mi rol como Full-stack Developer, lideré un equipo de desarrollo en la creación de un MVP Producto Mínimo Viable) desde la conceptualización hasta su prueba en el mercado. Esta experiencia fue fundamental para mi crecimiento como desarrollador y líder.",
+    link: "https://www.linkedin.com/company/id-for-ideas/",
+  },
+  {
+    date: "Septiembre 2021",
+    title: "Frontend Developer",
+    company: "Cliente - Profesional independiente (Freelancer)",
+    description: "Durante este proyecto, colaboré estrechamente con un desarrollador senior en PHP para crear una plataforma educativa destinada a niños de 4 a 13 años para una fundación. A pesar de ser un equipo pequeño, logramos desarrollar una solución robusta y efectiva.",
+  },
+];
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>

@@ -1,0 +1,23 @@
+---
+import { personalImageAlt } from "@/components/constants";
+---
+
+<article class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row">
+  <div class="[&>p]:mb-4 [&>p>strong]:text-yellow-500 dark:[&>p>strong]:text-yellow-100 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1">
+    <p>Me llamo Roberto, tengo 24 años y soy de Republica Dominicana. Conocí la programación en la universidad y <strong>actualmente soy tech lead</strong></p>
+    <p>
+      Mi logro más grande fue crear desde cero el producto estrella, el cual es el <strong>futuro de la empresa</strong>. Actualmente, este proyecto es usado par aconstruir las experiencias
+      conversacionales de nueva generación con AI.
+    </p>
+    <p>En mi primer año, fui reconocido como la <strong>promesa</strong> del año. Además de participar activamente en la comunidad, tengo experiencia desarrollando aplicaciones móviles y back-end.</p>
+  </div>
+
+  <img
+    width="200"
+    height="200"
+    src="/me.webp"
+    alt={personalImageAlt}
+    class="order-1 object-cover w-64 h-full p-1 bg-white md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl dark:bg-yellow-500/5 ring-1 ring-white/20"
+    style="object-position: 50% 50%"
+  />
+</article>
