@@ -1,0 +1,28 @@
+---
+interface Props {
+  url?: string;
+  Icon: Function;
+  title: string;
+  description: string;
+  flavor: "main" | "secondary";
+}
+
+const { url, Icon, title, description, flavor } = Astro.props;
+const background =
+  flavor === "main"
+    ? "before:[background-image:radial-gradient(circle,_#199AFC90_0,_#0D102380_100%)]"
+    : "before:[background-image:radial-gradient(circle,_rgba(88,101,242)_0,_rgba(13,16,35,0.4)_100%)]";
+---
+
+<a href={url} class="hover:scale-105 p-0.5 block rounded-2xl group bg-gradient-to-b transition from-[rgba(32,35,91,0.7)] to-[rgba(7,9,33,0.7)]">
+  <article
+    class={`bg-gradient-to-tl z-0 overflow-hidden relative rounded-xl before:absolute before:w-full before:aspect-square before:left-0 before:top-0 before:rounded-full before:blur-3xl before:opacity-80 before:-z-10 before:transition from-[rgba(32,35,91,0.7)] to-[rgba(7,9,33,0.7)] ${background}`}
+  >
+    <header class="flex items-center gap-3 p-6">
+      {Icon && <Icon />}
+      <h3 class="font-bold text-lg">{title}</h3>
+    </header>
+    <p class="text-balance px-6 line-clamp-2">{description}</p>
+    <div class="w-full h-[1px] bg-white/5 m-6"></div>
+  </article>
+</a>

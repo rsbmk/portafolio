@@ -1,0 +1,37 @@
+---
+import CardPost from "@/components/CardPost.astro";
+import SectionContainer from "@/components/SectionContainer.astro";
+import Layout from "@/layouts/Layout.astro";
+import { getSortedPostsWithIcons } from "@/utils";
+const posts = await Astro.glob("./*.md");
+const icons = await Astro.glob("../../components/icons/*.astro");
+const postsWithIcons = getSortedPostsWithIcons({ posts, icons });
+---
+
+<Layout
+  title="💻 Roberto Bocio | Fullstack Developer | IA Developer - Blog últimas publicaciones"
+  description="Blog de Roberto Bocio, Fullstack Developer y IA Developer. Con las últimas actualizaciones, novedades, desarrollos y cosas nuevas para aprender."
+>
+  <div class="mt-20">
+    <SectionContainer id="experiencia">
+      <h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">Últimas publicaciones</h2>
+      <div class="space-y-4">
+        {
+          postsWithIcons.map((post, index) => {
+            const flavor = index % 2 === 0 ? "main" : "secondary";
+
+            return (
+              <CardPost
+                flavor={flavor}
+                url={post.url}
+                Icon={post.frontmatter.icon}
+                title={post.frontmatter.title}
+                description={post.frontmatter.description}
+              />
+            );
+          })
+        }
+      </div>
+    </SectionContainer>
+  </div>
+</Layout>
