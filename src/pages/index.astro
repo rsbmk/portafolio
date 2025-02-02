@@ -9,19 +9,19 @@ import ProfileCheck from "@/components/icons/ProfileCheck.astro";
 import Projects from "@/components/Projects.astro";
 import SectionContainer from "@/components/SectionContainer.astro";
 import Hero from "@/components/Hero.astro";
-import { FRONT_PROJECTS, BACK_PROJECTS } from "@/components/constants";
+import { PROJECTS } from "@/components/constants";
 ---
 
 <Layout
-  title="Porfolio de Roberto Bocio - Desarrollador y Programador Web con 3 años de experiencia"
-  description="Contrata a Roberto Bocio para crear tu aplicación web o móvil. Desarrollador Web especializado en crear aplicaciones únicas."
+  title="💻 Roberto Bocio | Fullstack Developer | IA Developer"
+  description="Desarrollador de Software y Líder Técnico con más de 5 años de experiencia transformando ideas en productos innovadores y de alto impacto"
 >
   <main class="px-4">
-    <SectionContainer class="py-16 md:py-36">
+    <SectionContainer id="hero" class="py-16 md:py-36">
       <Hero />
     </SectionContainer>
   </main>
-  <div class="space-y-24">
+  <div class="space-y-24 mb-20">
     <SectionContainer id="experiencia">
       <h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">
         <Briefcase class="size-8" />
@@ -30,21 +30,21 @@ import { FRONT_PROJECTS, BACK_PROJECTS } from "@/components/constants";
       <Experience />
     </SectionContainer>
 
-    <SectionContainer id="proyectos-front">
+    <SectionContainer id="proyectos">
       <h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">
         <CodeIcon class="size-7" />
-        Proyectos Frontend
+        Proyectos
       </h2>
-      <Projects projects={FRONT_PROJECTS} />
+      <Projects projects={PROJECTS} />
     </SectionContainer>
 
-    <SectionContainer id="proyectos-back">
+    <!-- <SectionContainer id="proyectos-back">
       <h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">
         <CodeIcon class="size-7" />
         Proyectos Backend
       </h2>
       <Projects projects={BACK_PROJECTS} />
-    </SectionContainer>
+    </SectionContainer> -->
 
     <SectionContainer id="sobre-mi">
       <h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white">
