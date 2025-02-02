@@ -1,9 +1,11 @@
 ---
-import Badge from "@/components/Badge.astro";
+// import Badge from "@/components/Badge.astro";
 import LinkedInIcon from "@/components/icons/LinkedIn.astro";
 import MailIcon from "@/components/icons/Mail.astro";
+import GitHubIcon from "@/components/icons/GitHub.astro";
 import SocialPill from "@/components/SocialPill.astro";
 import { personalImageAlt } from "@/components/constants";
+import Paragraph from "./Paragraph.astro";
 ---
 
 <div class="max-w-xl">
@@ -14,13 +16,14 @@ import { personalImageAlt } from "@/components/constants";
     </a>
   </div>
   <h1 class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white">Hola ✌️, soy Roberto</h1>
-  <p class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300">
-    💻 Desarrollador de Software y Líder Técnico con más de 5 años de experiencia transformando ideas en productos innovadores y de alto impacto. 🚀
-    Mi pasión es crear soluciones de calidad que no solo funcionen, sino que destaquen.
-  </p>
-  <p class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300">
-    ✨ Si buscas a alguien que combine pasión, habilidades técnicas y visión de futuro, ¡soy la persona indicada!
-  </p>
+  <Paragraph>
+    💻 Desarrollador de Software y Líder Técnico con más de <strong>5 años de experiencia</strong> transformando ideas en productos innovadores y de alto
+    impacto.
+  </Paragraph>
+  <Paragraph> 🚀 Mi pasión es crear soluciones de calidad que no solo funcionen, sino que destaquen.</Paragraph>
+  <Paragraph>
+    ✨ Si buscas a alguien que combine pasión, habilidades técnicas y visión de futuro, <strong>¡soy la persona indicada!</strong>
+  </Paragraph>
 
   <nav class="flex flex-wrap gap-4 mt-8">
     <SocialPill href="mailto:bociomelors@gmail.com">
@@ -30,6 +33,10 @@ import { personalImageAlt } from "@/components/constants";
     <SocialPill href="https://linkedin.com/in/rsbmk">
       <LinkedInIcon class="size-4" />
       LinkedIn
+    </SocialPill>
+    <SocialPill href="https://github.com/rsbmk">
+      <GitHubIcon class="size-4" />
+      GitHub
     </SocialPill>
   </nav>
 </div>
